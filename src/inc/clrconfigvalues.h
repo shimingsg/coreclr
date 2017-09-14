@@ -333,6 +333,12 @@ RETAIL_CONFIG_DWORD_INFO(UNSUPPORTED_GCLogFileSize, W("GCLogFileSize"), 0, "Spec
 RETAIL_CONFIG_DWORD_INFO(UNSUPPORTED_GCCompactRatio, W("GCCompactRatio"), 0, "Specifies the ratio compacting GCs vs sweeping ")
 RETAIL_CONFIG_DWORD_INFO_DIRECT_ACCESS(EXTERNAL_GCPollType, W("GCPollType"), "")
 RETAIL_CONFIG_STRING_INFO_EX(EXTERNAL_NewGCCalc, W("NewGCCalc"), "", CLRConfig::REGUTIL_default)
+
+RETAIL_CONFIG_DWORD_INFO_DIRECT_ACCESS(UNSUPPORTED_GCprnLvl, W("GCprnLvl"), "Specifies the maximum level of GC logging")
+RETAIL_CONFIG_DWORD_INFO_DIRECT_ACCESS(UNSUPPORTED_GCtraceEnd, W("GCtraceEnd"), "Specifies the index of the GC when the logging should end")
+CONFIG_DWORD_INFO_DIRECT_ACCESS(INTERNAL_GCtraceFacility, W("GCtraceFacility"), "Specifies where to log to (this allows you to log to console, the stress log or a normal CLR log (good when you need to correlate the GC activities with other CLR activities)")
+RETAIL_CONFIG_DWORD_INFO_DIRECT_ACCESS(UNSUPPORTED_GCtraceStart, W("GCtraceStart"), "Specifies the index of the GC when the logging should start")
+
 RETAIL_CONFIG_DWORD_INFO(UNSUPPORTED_GCRetainVM, W("GCRetainVM"), 0, "When set we put the segments that should be deleted on a standby list (instead of releasing them back to the OS) which will be considered to satisfy new segment requests (note that the same thing can be specified via API which is the supported way)")
 RETAIL_CONFIG_DWORD_INFO_DIRECT_ACCESS(UNSUPPORTED_GCSegmentSize, W("GCSegmentSize"), "Specifies the managed heap segment size")
 RETAIL_CONFIG_DWORD_INFO_DIRECT_ACCESS(UNSUPPORTED_GCLOHCompact, W("GCLOHCompact"), "Specifies the LOH compaction mode")
